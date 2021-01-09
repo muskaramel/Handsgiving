@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Charity Events - Handsgiving</title>
+  <style>
+//    * {border: 1px solid black}
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0 auto;
+      overflow: hidden;
+      text-align: center;
+      overflow-y: scroll;
+      width: 100%;
+      height: 450px;
+      font-family: Arial, Helvetica, sans-serif;
+      border-radius: 20px;
+    }
+
+    .container {
+      width: 90%;
+      height: auto;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    header {
+      background: #333;
+      color: #ffffff;
+      padding-top: 30px;
+      min-height: 60px;
+      border-bottom: 3px solid red;
+    }
+
+    #navbar a {
+      color: #ffffff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+
+    #navbar ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    #navbar li {
+      display: inline;
+      padding: 0px 15px 0px 15px;
+    }
+
+    #navbar #charityevent{
+      color: red;
+    }
+
+    #navbar #login-btn {
+      color: white;
+      background-color: red;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    header #navbar {
+      float: right;
+    }
+
+    header #branding {
+      float: left;
+      padding-bottom: 15px;
+    }
+
+    header #branding h1 {
+      margin: 0;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    .content{
+      display: inline-block;
+      padding-top: 10px;
+      width: 80%;
+      height: 850px;
+    }
+
+    .leftside {
+      float: left;
+      min-width: 20px;
+      height: 400px;
+    }
+    .rightside {
+      float: right;
+    }
+
+    .search{
+      margin: 10px;
+    }
+    form.example input[type=text] {
+      padding: 5px;
+      font-size: 17px;
+      border-radius: 10px 0px 0px 10px;
+      border: 1px solid grey;
+      float: left;
+      width: 80%;
+      background: #f1f1f1;
+    }
+    form.example button {
+      float: left;
+      width: 15%;
+      padding: 5px;
+      border-radius: 0px 10px 10px 0px;
+      background: red;
+      color: white;
+      font-size: 17px;
+      border: 1px solid grey;
+      border-left: none;
+      cursor: pointer;
+    }
+    form.example button:hover {
+      background: #0b7dda;
+    }
+    form.example::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .typechkbox, .targetchkbox, .durationchkbox, .datechkbox{
+      margin: 10px;
+      text-align: left;
+    }
+
+    .eventlist{
+      min-width: 20px;
+      height: 400px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      margin: 20px;
+      justify-items: center;
+      float: left;
+      align-items: center;
+    }
+
+    .event{
+      padding: 50px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      bottom: 100%;
+      width: 100%;
+    }
+
+    footer img {
+      width: 70px;
+      float: left;
+    }
+
+    footer h2 {
+      float: left;
+      margin-left: 20px;
+    }
+
+    .footer-label {
+      width: 20%;
+      float: right;
+    }
+
+    .footer-label p {
+      text-align: right;
+    }
+
+    footer #copyright {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <!-- IDEA: Top Navbar -->
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1>HandsGiving</h1>
+        </div>
+        <nav id="navbar">
+          <ul>
+            <li><a href="Homepage.html">Homepage</a></li>
+            <li><a href="News.html">News</a></li>
+            <li><a href="Events.html" id="charityevent">Charity</a></li>
+            <li><a href="Organization.html">Organization</a></li>
+            <li><a href="About Us.html">About Us</a></li>
+            <li><a href="Login.html" id="login-btn">Login / Register</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="clear"></div>
+    </header>
+  </div>
+    <div class="content">
+      <div class="leftside">
+        <div class="search">
+  	       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	        <form class="example" action="action_page.php">
+  		           <input id="myInput" type="text" placeholder="Search.." name="search">
+  		           <button type="submit"><i class="fa fa-search"></i></button>
+  	        </form>
+        </div>
+        <div class="typechkbox">
+          Charity Type
+          <form>
+            <input type="checkbox" id="charity1" name="charity1" value="Donation">
+            <label for="charity1"> Donation</label><br>
+            <input type="checkbox" id="charity2" name="charity2" value="Volunteer">
+            <label for="charity2"> Volunteer call</label><br>
+            <input type="checkbox" id="charity3" name="charity3" value="Campaign">
+            <label for="charity3"> Campaign</label><br><br>
+          </form>
+        </div>
+        <div class="targetchkbox">
+          Charity Target
+          <form>
+            <input type="checkbox" id="target1" name="target1" value="Orphans">
+            <label for="target1"> Orphans</label><br>
+            <input type="checkbox" id="target2" name="target2" value="Religious">
+            <label for="target2"> Religious places</label><br>
+            <input type="checkbox" id="target3" name="target3" value="Less">
+            <label for="target3"> Less fortunate people</label><br><br>
+          </form>
+        </div>
+        <div class="durationchkbox">
+          Charity Duration
+          <form>
+            <input type="checkbox" id="duration1" name="duration1" value="<1 day">
+            <label for="duration1"> Less than 1 day</label><br>
+            <input type="checkbox" id="duration2" name="duration2" value="1-2 days">
+            <label for="duration2"> 1 - 2 days</label><br>
+            <input type="checkbox" id="duration3" name="duration3" value="A week">
+            <label for="duration3"> A week</label><br><br>
+          </form>
+        </div>
+        <div class="datechkbox">
+          Date Posted
+          <form>
+            <input type="checkbox" id="date1" name="date1" value="Recent">
+            <label for="date1"> Recently</label><br>
+            <input type="checkbox" id="date2" name="date2" value="1 Week">
+            <label for="date2"> 1 week ago</label><br>
+            <input type="checkbox" id="date3" name="date3" value="2 Week">
+            <label for="date3"> 2 week ago</label><br><br>
+          </form>
+        </div>
+      </div>
+      <div class="rightside">
+        <div class="eventlist">
+          <div class="event">
+            <img src="./img/IMG20191116084111.jpg"
+            alt="STEM Activity"
+            width = 320 height = 240>
+            <br>
+            <a href="#"><p>STEM Activity</p></a>
+          </div>
+          <div class="event">
+            <img src="./img/IMG-20200305-WA0040.jpg"
+            alt="Donation for disabled community"
+            width = 320 height = 240>
+            <br>
+            <a href="#"><p>Donation for disabled community</p></a>
+          </div>
+          <div class="event">
+            <img src="./img/IMG20200222145906.jpg"
+            alt="Induction Programme"
+            width = 320 height = 240>
+            <br>
+            <a href="#"><p>Induction Programme</p></a>
+          </div>
+          <div class="event">
+            <img src="./img/IMG20191013082859.jpg"
+            alt="Mosque Cleaning Programme"
+            width = 320 height = 240>
+            <br>
+            <a href="Charity Overview.html"><p>Mosque Cleaning Programme</p></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="footer">
+    <footer>
+      <img src="./img/logo-hg.png" alt="logo-HandsGiving">
+      <h2>HandsGiving</h2>
+
+      <div class="footer-label">
+        <p>HandsGiving is a non-profit website that promotes various charities so that users have an easy access to them.</p>
+      </div>
+
+      <div class="clear"></div>
+
+      <p id="copyright">HandsGiving, Copyright &copy; 2020</p>
+    </footer>
+  </div>
+</body>
+
+</html>

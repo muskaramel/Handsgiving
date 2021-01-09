@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Register - Handsgiving</title>
+  <link rel="stylesheet" href="./css/Register.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div id="branding">
+        <h1>HandsGiving</h1>
+      </div>
+      <nav id="navbar">
+        <ul>
+          <li><a href="Homepage.html">HOMEPAGE</a></li>
+          <li><a href="News.html">NEWS</a></li>
+          <li><a href="Events.html">CHARITY</a></li>
+          <li><a href="Organization.html">ORGANIZATION</a></li>
+          <li><a href="About Us.html">ABOUT US</a></li>
+          <button type="button" class="login"><a href="Login.html">LOGIN/REGISTER</a></button>
+        </ul>
+      </nav>
+    </div>
+    <div class="clear"></div>
+  </header>
+
+  <div class="para">
+    <p class="create"><strong>Create an account</strong></p>
+    <p class="have"> <strong>Already have an account? </strong> <a href="Login.html" class="blue"><strong>Login</strong> </a></p>
+  </div>
+  <main>
+    <div class="backreg">
+      <br>
+      <form name="registerPage" class="box" action="Login.html" method="post">
+        <br>
+        <div class="fnameleft">
+          <strong>First Name *</strong> <br>
+          <input type="text" id="fname" placeholder="Your First Name..." name="fname">
+        </div>
+        <div class="lnameright">
+          <strong>Last Name *</strong> <br>
+          <input type="text" id="lname" placeholder="Your Last Name..." name="lname">
+          <br>
+        </div>
+        <br><br>
+        <p id="p1" class="info"></p>
+        <div class="info">
+          <strong>Email *</strong>
+          <input class="space" type="text" placeholder="Your E-mail..." name="email">
+        </div>
+        <p id="p2" class="info"></p>
+        <div class="info">
+          <strong>Password*</strong>
+          <input type="password" class="space" placeholder="Set a password..." name="ps1">
+        </div>
+        <div class="info">
+          <strong>Password Confirmation*</strong>
+          <input type="password" class="space" placeholder="Re-enter your password..." name="ps2">
+        </div>
+        <p id="p3" class="info"></p>
+        <p id="p4" class="info"></p>
+        <br>
+
+        <div class="centerSign">
+          <button id="but">Sign Up</button>
+        </div>
+        <br>
+      </form>
+      <br>
+      <div class="para terms">
+        View our <a href="Terms.html" class="blue">terms of use</a> and <a href="Terms.html" class="blue">privacy policy</a>
+      </div>
+      <br>
+    </div>
+  </main>
+  <hr>
+  <div>
+    <footer>
+      <img src="./img/logo-hg.png" alt="logo-HandsGiving" width="60" height="60">
+      <h2 class="h2">HandsGiving</h2>
+
+      <div id="label">
+        <p>HandsGiving is a non-profit website that promotes various charities so that users have an easy access to them.</p>
+      </div>
+
+      <div class="clear"></div>
+
+      <p id="copyright">HandsGiving, Copyright &copy; 2020</p>
+    </footer>
+
+  </div>
+
+  <script>
+    const btn = document.querySelector('#but');
+    const para1 = document.querySelector('#p1');
+    const para2 = document.querySelector('#p2');
+    const para3 = document.querySelector('#p3');
+    const para4 = document.querySelector('#p4');
+
+    function go(d) {
+      var firstname = document.registerPage.fname.value;
+      var lastname = document.registerPage.lname.value;
+      var email = document.registerPage.email.value;
+      var pass1 = document.registerPage.ps1.value;
+      var pass2 = document.registerPage.ps2.value;
+
+      if (firstname === '' || lastname === '') { //check if the user insert the name
+        d.preventDefault(); //prevent the form from submitting
+        para1.textContent = 'Please fill in both first name and last name.';
+      } else if (email === '') { //check if the user insert the email
+        d.preventDefault(); //prevent the form from submitting
+        para2.textContent = 'Please fill in your Email.';
+      } else if (pass1 === '' || pass2 === '') { //check if the user insert the password
+        d.preventDefault(); //prevent the form from submitting
+        para3.textContent = 'Please fill in the passwords.';
+      } else if (pass1 != pass2) { //check if both password are same
+        d.preventDefault(); //prevent the form from submitting
+        para4.textContent = 'The password you entered is not same.';
+      }
+    }
+    btn.addEventListener('click', go);
+  </script>
+</body>
+
+</html>

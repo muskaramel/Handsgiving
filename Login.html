@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Login - Handsgiving</title>
+  <link rel="stylesheet" href="./css/Login.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div id="branding">
+        <h1>HandsGiving</h1>
+      </div>
+      <nav id="navbar">
+        <ul>
+          <li><a href="Homepage.html">HOMEPAGE</a></li>
+          <li><a href="News.html">NEWS</a></li>
+          <li><a href="Events.html">CHARITY</a></li>
+          <li><a href="Organization.html">ORGANIZATION</a></li>
+          <li><a href="About Us.html">ABOUT US</a></li>
+          <button type="button" class="login"><a href="Register.html">LOGIN/REGISTER </a></button>
+        </ul>
+      </nav>
+    </div>
+    <div class="clear"></div>
+  </header>
+
+  <img class="image" src="./img/logo-hg.png" alt="Logo" width="80" height="80">
+
+  <div>
+    <p class="para"><strong>HandsGiving</strong></p>
+  </div>
+
+  <main>
+    <div class="backlog">
+      <br>
+      <form name="loginPage" class="box" action="Test_Homepage.html" method="post">
+        <div class="info">
+          <br>
+          <strong>Username*</strong>
+          <br>
+          <input class="space" type="text" placeholder="Enter your Username" name="name">
+          <br><br>
+        </div>
+
+        <p id="p1" class="info"></p> <br>
+
+        <div class="info">
+          <strong>Password*</strong>
+          <br>
+          <input type="password" class="space" placeholder="Enter your Password" name="ps">
+          <br><br>
+        </div>
+
+        <p id="p2" class="info"></p>
+
+        <br>
+        <input type="checkbox" class="remember" name="remember">
+        <label for="remember"> Remember Me</label>
+        <br><br>
+        <div class="forgot">
+          <a class="blue" href="Forgot.html">Forgot Password?</a>
+        </div>
+        <div class="buttonlogin">
+          <button id="but">Login</button>
+        </div>
+
+        <br><br>
+
+      </form>
+      <br>
+      <div class="center">
+        <strong>New to our website?</strong>
+        <a class="blue" href="Register.html"> Sign Up</a>
+      </div>
+      <br>
+      <div class="terms">
+        By continuing, you agree to our <a class="blue" href="Terms.html">terms of use</a>
+      </div>
+      <div class="terms2">
+        and <a class="blue" href="Terms.html">privacy policy</a>
+        <br><br>
+      </div>
+    </div>
+  </main>
+  <br>
+  <hr>
+  <div>
+    <footer>
+      <img src="./img/logo-hg.png" alt="logo-HandsGiving" width="60" height="60">
+      <h2 class="h2">HandsGiving</h2>
+
+      <div id="label">
+        <p>HandsGiving is a non-profit website that promotes various charities so that users have an easy access to them.</p>
+      </div>
+
+      <div class="clear"></div>
+
+      <p id="copyright">HandsGiving, Copyright &copy; 2020</p>
+    </footer>
+
+  </div>
+
+  <script>
+    const btn = document.querySelector('#but');
+    const para1 = document.querySelector('#p1');
+    const para2 = document.querySelector('#p2');
+
+    function go(d) {
+      var name = document.loginPage.name.value;
+      var pass = document.loginPage.ps.value;
+
+      if (name === '') { //check if the user insert the name
+        d.preventDefault(); //prevent the form from submitting
+        para1.textContent = 'Please fill in your username.';
+      } else if (pass === '') { //check if the user insert the password
+        d.preventDefault(); //prevent the form from submitting
+        para2.textContent = 'Please fill in your password.';
+      }
+    }
+    btn.addEventListener('click', go);
+  </script>
+
+</body>
+
+</html>
