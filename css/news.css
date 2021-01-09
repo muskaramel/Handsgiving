@@ -1,0 +1,120 @@
+body {
+  font: 16px/1.6em arial, helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+img {
+  float: left;
+  border-radius: 5px;
+}
+
+text {
+  float: right;
+}
+
+span {
+  float: right;
+  height: 15vw;
+  width: 15vw;
+}
+
+.container2{
+  width: 65%;
+  margin: auto;
+  overflow: hidden;
+}
+header{
+  background: #333;
+  color: #ffffff;
+  padding-top: 30px;
+  min-height: 60px;
+  border-bottom: 3px solid red;
+}
+#navbar a{
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+#navbar ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#navbar li{
+  display: inline;
+  padding: 0px 15px 0px 15px;
+}
+
+#navbar li a:not(#login-btn):hover{
+  font-weight: bold;
+}
+
+#navbar li #login-btn:hover{
+  background-color: #999;
+  color: #fff;
+}
+
+#navbar #login-btn{
+  color: black;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#navbar li #current-page{
+  color: red;
+}
+
+header #navbar{
+  float: right;
+}
+
+header #branding{
+  float: left;
+  padding-bottom: 15px;
+}
+header #branding h1{
+  margin: 0;
+}
+.clear{
+  clear: both;
+}
+
+footer{
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+footer img{
+  width: 70px;
+  float: left;
+}
+
+footer h2{
+  float: left;
+  margin-left: 20px;
+}
+
+.footer-label{
+  width: 20%;
+  float: right;
+}
+
+.footer-label p{
+  text-align: right;
+}
+
+footer #copyright{
+  text-align: center;
+}
