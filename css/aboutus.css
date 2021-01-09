@@ -1,0 +1,195 @@
+.container{
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+header{
+  background: #333;
+  color: #ffffff;
+  padding-top: 30px;
+  min-height: 60px;
+  border-bottom: 3px solid #333;
+  font-family: arial;
+}
+#navbar a{
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+#navbar ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#navbar li{
+  display: inline;
+  padding: 0px 15px 0px 15px;
+}
+
+#navbar #login-btn{
+  color: black;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#navbar a:hover {
+  color: red;
+}
+
+#navbar a.active {
+  color: #EC902E;
+}
+
+#navbar #login-btn:hover {
+  background-color: #999;
+  color: #fff;
+}
+
+
+header #navbar{
+  float: right;
+}
+
+header #branding{
+  float: left;
+  padding-bottom: 15px;
+}
+header #branding h1{
+  margin: 0;
+}
+.clear{
+  clear: both;
+}
+
+
+/* Title Header Style */
+body{
+  margin: 0;
+}
+
+.title{
+  max-width: 100%;
+  border: 1px solid #EC902E;
+  height: 200px;
+  margin:auto;
+  background-color: #EC902E;
+}
+
+.title h1{
+  text-align: center;
+  font-family: arial;
+  padding:50px;
+  color: white;
+  font-size: 3em;
+}
+
+/* Content Style */
+.content{
+  max-width: 100%;
+  padding-top: 40px;
+}
+
+.content h4{
+  font-family: verdana;
+  padding-left:350px;
+  padding-right: 350px;
+}
+
+.content p{
+  padding-left:350px;
+  padding-right: 350px;
+  font-family: verdana;
+  line-height: 1.5;
+}
+
+/* Column Style */
+* {
+  box-sizing: border-box;
+}
+
+.contact-header {
+  text-align: center;
+  font-family: arial;
+  font-size: 24px;
+}
+
+.contact-header hr {
+  width: 60%;
+}
+
+input, textarea {
+  border-radius: 5px;
+  border: 1px solid #8E8E8E;
+  padding: 12px;
+
+}
+
+form {
+  padding-top: 20px;
+}
+
+.contact-info {
+  font-family: arial;
+  font-size: 16px;
+}
+
+.column1 {
+  float: left;
+  width: 50%;
+  padding-left: 200px;
+}
+
+.column2 {
+  float: left;
+  width: 50%;
+  padding-left: 30px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.form-control {
+  width: 70%;
+}
+
+/* Footer */
+footer{
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  left:0;
+  bottom: 0;
+  position: relative;
+  max-width: 100%;
+  font-family: arial;
+}
+
+footer img{
+  width: 70px;
+  float: left;
+}
+
+footer h2{
+  float: left;
+  margin-left: 20px;
+}
+
+.footer-label{
+  width: 20%;
+  float: right;
+}
+
+.footer-label p{
+  text-align: right;
+}
+
+footer #copyright{
+  text-align: center;
+}
