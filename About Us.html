@@ -90,7 +90,6 @@
           </div>
 
           <div class="column2">
-            <form action="response.html" method="post">
               <label for=" "><b>Name:</b></label><br>
               <input class="form-control" type="text" name="name"><br><br>
 
@@ -103,8 +102,7 @@
               <label for=" "><b>Message:</b></label><br>
               <textarea class="form-control" rows="8" ></textarea><br><br>
 
-              <button class="btn-form" name="button">Submit</button><br><br><br>
-            </form>
+              <button onclick="messageFunction()">Submit</button><br><br><br>
           </div>
       </div>
 
@@ -125,6 +123,11 @@
       <p id="copyright">HandsGiving, Copyright &copy; 2020</p>
     </footer>
 
+    <script>
+    function messageFunction() {
+      alert("Your message has been received.");
+    }
+    </script>
 
   </body>
 </html>
